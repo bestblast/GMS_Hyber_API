@@ -23,4 +23,5 @@ Contents
    :caption: First steps
    
    usage
+   part4
    api

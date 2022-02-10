@@ -1,3 +1,6 @@
+RECEIVE MESSAGE DELIVERY REPORT
+============================
+
 4.1. Receive single delivery report
 -----------------------------------
 
@@ -8,14 +11,14 @@ for Viber and WhatsApp channels.
 
 There are two ways to receive"seen" statuses:
 
--Automatic sendingto your URL. To activate this functionality, you need to send a request to your manager.
--The request using GET method (Section 5).
+- Automatic sendingto your URL. To activate this functionality, you need to send a request to your manager.
+- The request using GET method (Section 5).
 
 Example of report:
 
 .. code-block:: json
 
-   {
+{
    "number":380961111111,
    "time":1477417294667,
    "status":2,
@@ -26,7 +29,7 @@ Example of report:
    "sent_via":"sms",
    "total_sms_parts":1,
    "delivered_sms_parts":1
-   }
+}
 
 A description of the report parameters is provided in Section8.
 
@@ -38,9 +41,9 @@ The number of reports in the batch and the period of its
 sending are configured on GMS side.
 
 Example of report:
-.. code-block:: jsonld
+.. code-block:: json
 
-   [
+[
    {
       "number":"380961111111",
       "time":1477417294667,
@@ -71,20 +74,22 @@ Example of report:
       "extra_id":"AD-6640-7008",
       "sent_via":"viber"
    }
-   ]
+]
 
-A description of the report parameters is provided in Section8.
+A description of the report parameters is provided in Section 8.
 
 4.3. Receive delivery report of template Viber Message
 -----------------------------------------------------
 As soon as the status is updated in GMS system, the delivery report is sent to your URL in JSON format.
 If the sent Message matches the template, you receive the template ID in the "matching_template_id" field:
 
-.. code-block::
+.. code-block:: json
 
    {"number": "380961111111","time": 1477417294667,"status": 2,"substatus": 23,"hyber_status": 23043,"message_id": "9f60ac8f-e721-5027-b838-e6fcb95fcd7a","extra_id": "AD-6640-7006","sent_via": "viber","matching_template_id": 6349599}
 
 If the Message does not match the template, you receive the value 0 in the field "matching_template_id": 
+
+.. code-block:: json
 
 {"number": "380961111111","time": 1477417294667,"status": 2,"substatus": 23,"hyber_status": 23043,"message_id": "9f60ac8f-e721-5027-b838-e6fcb95fcd7a","extra_id": "AD-6640-7006","sent_via": "viber","matching_template_id": 0}
 

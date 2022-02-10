@@ -1,17 +1,18 @@
-Welcome to Lumache's documentation!
+Welcome to GMS API JSON V2 Protocol documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**What is an API?** 
+
+An application programming interface is a software tool, typically used to ease the creation of other software or to relay information or instructions between different programs and applications. 
+
+GMS uses APIs to – among other things – allow clients to link their CRM with our A2P messaging solutions or construct a Viber advertising campaign.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
 
-   This project is under active development by bla-bla.
+   This project is under active development.
 
 Contents
 --------

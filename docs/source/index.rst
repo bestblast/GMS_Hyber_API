@@ -1,5 +1,5 @@
 Welcome to GMS API JSON V2 Protocol documentation!
-===================================
+==================================================
 
 **What is an API?** 
 

@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'JSON V2Protocol'
+copyright = '2022, GMS'
+author = 'GMS'
 
-release = '0.1'
-version = '0.1.0'
+release = '2.2'
+version = '2.2.0'
 
 # -- General configuration
 

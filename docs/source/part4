@@ -1,5 +1,5 @@
-4.1.Receive single delivery report
-----------------------------------
+4.1. Receive single delivery report
+-----------------------------------
 
 As soon as the status is updated in GMS system, 
 the delivery report is sent to your URL in JSON format.
@@ -29,7 +29,7 @@ Example of report:
 
 A description of the report parameters is provided in Section8.
 
-4.2.Receive batched delivery report
+4.2. Receive batched delivery report
 -----------------------------------
 As soon as the status is updated in GMS system, Message delivery reports are stored in the batch. 
 The batch is sent to your URL in json-format (http, https). 
@@ -73,7 +73,7 @@ Example of report:
 
 A description of the report parameters is provided in Section8.
 
-4.3.Receive delivery report of template Viber Message
+4.3. Receive delivery report of template Viber Message
 -----------------------------------------------------
 As soon as the status is updated in GMS system, the delivery report is sent to your URL in JSON format.
 If the sent Message matches the template, you receive the template ID in the "matching_template_id" field:

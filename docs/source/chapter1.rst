@@ -6,9 +6,9 @@ Viber Business Messaging
 
 Viber Business Messages allows to send the following types of Messages:
 
-.. figure:: /source/img/ch1_pic1.JPG
+.. figure:: /img/ch1_pic1.JPG
    :figwidth: 500px
-   :target: /source/img/ch1_pic1.JPG
+   :target: /img/ch1_pic1.JPG
    :align: center
 
    Kinds of Viber Messages
@@ -28,7 +28,7 @@ The following are examples of the types of non-Template Messages that can be sen
    :target: /img/ch1_pic2.JPG
    :align: center
    
-   Kinds of Viber Messages
+   Kinds of WhatsApp Messages
 
 
 In order to open a chat with a User, you must first send a pre-registered text template Message.

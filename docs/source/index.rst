@@ -20,8 +20,11 @@ Contents
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: First steps
+   :caption: API JSON v2
    
-   usage
+   chapter1
+   chapter2
+   chapter3
    part4
+   usage
    api

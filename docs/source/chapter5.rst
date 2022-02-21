@@ -6,19 +6,19 @@ To GET Message status report, use the following authorization options and URL:
 
 Table 5.1 Connection parameters
 
-===================== ================================================================================
+===================== ===============================================================================
 Parameters            Value
-===================== ================================================================================
+===================== ===============================================================================
 Provider Role         Server
 Client Role           Client
-Get Detailed DR URLs  | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/advanced_
-                      | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/advanced_
-Get Simple DR URLs    | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple_
-                      | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple_
+Get Detailed DR URLs  | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/advanced
+                      | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/advanced
+Get Simple DR URLs    | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple
+                      | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple
 Method                GET
 HTTP Authentication   Basic
 HTTP Login/Password   TBA by GMS in technical plan
-===================== ================================================================================
+===================== ===============================================================================
 
 GET simple delivery report
 --------------------------
@@ -27,11 +27,11 @@ Simple Message delivery report may be requested by the Message identifier (recei
 
 To GET the report using Message identifier, use the following URL:
 
-https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple_
+https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple
 
 To GET the report using the additional identifier, use the following URL:
 
-https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple_
+https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple
 
 An example of simplified delivery report: 
 

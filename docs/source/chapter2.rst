@@ -5,6 +5,7 @@ JSON V2 protocol allows you to use multiple communication channels with your aud
 Access details and URLs: 
 
 Table 2.1. Connection parameters
+
 +---------------------+--------------------------------------------+
 | Parameters          | Value                                      |
 +=====================+============================================+

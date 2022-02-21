@@ -12,11 +12,9 @@ Table 3.1. Connection parameters
 +---------------------+--------------------------------------------+
 | Client Role         | Client                                     |
 +---------------------+--------------------------------------------+
-| Batch-URL of the API       | https://proxy-{site}.hyber.im/{client_id}/batch  |
-|                            | https://proxy-{site}.hyber.im/{client_id}/batch/sync |
+| Batch-URL of the API       | https://proxy-{site}.hyber.im/{client_id}/batch https://proxy-{site}.hyber.im/{client_id}/batch/sync |
 +---------------------+--------------------------------------------+
-| Broadcast-URL of the API   | https://proxy-{site}.hyber.im/{client_id}/broadcast      |
-|                            | https://proxy-{site}.hyber.im/{client_id}/broadcast/sync |
+| Broadcast-URL of the API   | https://proxy-{site}.hyber.im/{client_id}/broadcast https://proxy-{site}.hyber.im/{client_id}/broadcast/sync |
 +---------------------+--------------------------------------------+
 | Method              | POST                                       |
 +---------------------+--------------------------------------------+

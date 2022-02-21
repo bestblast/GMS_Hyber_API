@@ -610,11 +610,14 @@ Response to a Mass Messages request
 
 If the request was sent to the URL https://proxy-{site}.hyber.im/{client_id}/batch or https://proxy-{site}.hyber.im/{client_id}/broadcast you will receive a campaign ID in response as: 
 
-{"job_id": "66591729-cb47-5ef9-964b-949dc6aff84f"}
+.. code-block:: json
+
+   {"job_id": "66591729-cb47-5ef9-964b-949dc6aff84f"}
 
 If the request is sent to the URL https://proxy-{site}.hyber.im/{client_id}/batch/sync or https://proxy-{site}.hyber.im/{client_id}/broadcast/sync you receive details on each Message with their "message_id":
 
 .. code-block:: json
+
    {
        "messages": [
           {
@@ -643,14 +646,18 @@ GET campaign status report
 The campaign status request allows you to get information about the processing status of your campaign.
 To get campaign status, use the following authorization options and URL:
 
-Table 3.2. Connection parameters  
-Parameters	Value
-Provider Role	Server
-Client Role	Client
-Get Job status URL	https://proxy-{site}.hyber.im/{client_id}/status/{job_id}
-Method	GET
-HTTP Authentication	Basic
-HTTP Login/Password	TBA by GMS in technical plan
+Table 3.2. Connection parameters
+
+=====================  ==========================================================
+Parameters	           Value
+=====================  ==========================================================
+Provider Role	        Server
+Client Role	           Client
+Get Job status URL	  https://proxy-{site}.hyber.im/{client_id}/status/{job_id}
+Method	              GET
+HTTP Authentication	  Basic
+HTTP Login/Password	  TBA by GMS in technical plan
+=====================  ==========================================================
 
 Example of campaign status:
 

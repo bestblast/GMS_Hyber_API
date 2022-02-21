@@ -5,14 +5,6 @@ JSON V2 protocol grants mass sending of Messages in a single request. The maximu
 Access details and URLs: 
 Table 3.1. Connection parameters
 
-Batch-URL of the API	
-https://proxy-{site}.hyber.im/{client_id}/batch
-https://proxy-{site}.hyber.im/{client_id}/batch/sync
-Broadcast-URL of the API	
-https://proxy-{site}.hyber.im/{client_id}/broadcast
-https://proxy-{site}.hyber.im/{client_id}/broadcast/sync
-
-
 +---------------------+--------------------------------------------+
 | Parameters          | Value                                      |
 +=====================+============================================+

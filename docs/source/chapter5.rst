@@ -60,11 +60,11 @@ A detailed Message delivery report may be requested by the Message identifier (r
 
 To GET the report using Message identifier, use the following URL:
 
-https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/advanced_
+https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/advanced
 
 To GET the report using the additional identifier, use the following URL:
 
-https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/advanced_
+https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/advanced
 
 An example of detailed delivery report:
 

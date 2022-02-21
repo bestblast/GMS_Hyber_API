@@ -1,5 +1,6 @@
 USER REPLIES (2WAY)
 ===================
+
 If the Viber or WhatsApp User replies to the Message, its reply can be automatically sent to your URL.
 
 Authorization parameters and URL: 
@@ -79,12 +80,13 @@ Example of WhatsApp User reply:
    }
 
 User replies can be in the following combinations: 
-#. "text_from_subscriber"
-#. "image_url"
-#. "video_url"
-#. "audio_url"
-#. "doc_url" + "text_from_subscriber"
-#. "location"
+
+- "text_from_subscriber"
+- "image_url"
+- "video_url"
+- "audio_url"
+- "doc_url" + "text_from_subscriber"
+- "location"
 
 A description of the report parameters is provided in Section 8.
 

@@ -27,11 +27,13 @@ Simple Message delivery report may be requested by the Message identifier (recei
 
 To GET the report using Message identifier, use the following URL:
 
-https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple
+\(w)
+   https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple
 
 To GET the report using the additional identifier, use the following URL:
 
-https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple
+\(w)
+   https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple
 
 An example of simplified delivery report: 
 

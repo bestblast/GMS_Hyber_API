@@ -28,5 +28,6 @@ Contents
    part4
    chapter5
    chapter6
+   chapter8
    usage
    api

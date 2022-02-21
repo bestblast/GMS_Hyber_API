@@ -648,16 +648,22 @@ To get campaign status, use the following authorization options and URL:
 
 Table 3.2. Connection parameters
 
-+--------------------+----------------------------------------------------------+
-| Parameters	      | Value                                                    |
-+====================+==========================================================+
-|Provider Role	      | Server                                                   |
-|Client Role	      | Client                                                   |
-|Get Job status URL	| https://proxy-{site}.hyber.im/{client_id}/status/{job_id}|
-|Method	            | GET                                                      |
-|HTTP Authentication | Basic                                                    |
-|HTTP Login/Password | TBA by GMS in technical plan                             |
-+--------------------+----------------------------------------------------------+
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| Parameters                | Value                                                                                                         |
++===========================+===============================================================================================================+
+| Provider Role             | Server                                                                                                        |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+
++--------------------=+----------------------------------------------------------+
+| Parameters	       | Value                                                    |
++=====================+==========================================================+
+| Provider Role	    | Server                                                   |
+| Client Role	       | Client                                                   |
+| Get Job status URL	 | https://proxy-{site}.hyber.im/{client_id}/status/{job_id}|
+| Method	             | GET                                                      |
+| HTTP Authentication | Basic                                                    |
+| HTTP Login/Password | TBA by GMS in technical plan                             |
++---------------------+----------------------------------------------------------+
 
 Example of campaign status:
 

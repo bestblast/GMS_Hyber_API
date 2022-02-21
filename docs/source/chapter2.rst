@@ -5,15 +5,23 @@ JSON V2 protocol allows you to use multiple communication channels with your aud
 Access details and URLs: 
 
 Table 2.1. Connection parameters
-Parameters	Value
-Provider Role	Server
-Client Role	Client
-URL of the API	https://api-v2-{site}.hyber.im/{client_id}
-
-Method	POST
-HTTP Authentication	Basic
-Mandatory header	Content-Type: application/json
-HTTP Login/Password	TBA by GMS in technical plan
++---------------------+--------------------------------------------+
+| Parameters          | Value                                      |
++=====================+============================================+
+| Provider Role       | Server                                     |
++---------------------+--------------------------------------------+
+| Client Role         | Client                                     |
++---------------------+--------------------------------------------+
+| URL of the API      | https://api-v2-{site}.hyber.im/{client_id} |
++---------------------+--------------------------------------------+
+| Method              | POST                                       |
++---------------------+--------------------------------------------+
+| HTTP Authentication | Basic                                      |
++---------------------+--------------------------------------------+
+| Mandatory header    | Content-Type: application/json             |
++---------------------+--------------------------------------------+
+| HTTP Login/Password | TBA by GMS in technical plan               |
++---------------------+--------------------------------------------+
 
 Query parameters are divided into two types: mandatory and optional. If at least one mandatory parameter is missing, the request is not accepted by platform. Each of the Message communication channels has its own unique parameters. A description of all request parameters is provided in Section 8. 
 Examples of single Messages requests are described in Sections 2.1-2.5.

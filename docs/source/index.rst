@@ -26,5 +26,7 @@ Contents
    chapter2
    chapter3
    part4
+   chapter5
+   chapter6
    usage
    api

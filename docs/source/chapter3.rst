@@ -649,15 +649,15 @@ To get campaign status, use the following authorization options and URL:
 Table 3.2. Connection parameters
 
 +---------------------+----------------------------------------------------------+
-| Parameters	       | Value                                                    |
+| Parameters          | Value                                                    |
 +=====================+==========================================================+
-| Provider Role	    | Server                                                   |
+| Provider Role       | Server                                                   |
 +---------------------+----------------------------------------------------------+
-| Client Role	       | Client                                                   |
+| Client Role         | Client                                                   |
 +---------------------+----------------------------------------------------------+
-| Get Job status URL	 | https://proxy-{site}.hyber.im/{client_id}/status/{job_id}|
+| Get Job status URL  | https://proxy-{site}.hyber.im/{client_id}/status/{job_id}|
 +---------------------+----------------------------------------------------------+
-| Method	             | GET                                                      |
+| Method              | GET                                                      |
 +---------------------+----------------------------------------------------------+
 | HTTP Authentication | Basic                                                    |
 +---------------------+----------------------------------------------------------+

@@ -5,26 +5,27 @@ JSON V2 protocol grants mass sending of Messages in a single request. The maximu
 Access details and URLs: 
 Table 3.1. Connection parameters
 
-+---------------------+--------------------------------------------+
-| Parameters          | Value                                      |
-+=====================+============================================+
-| Provider Role       | Server                                     |
-+---------------------+--------------------------------------------+
-| Client Role         | Client                                     |
-+---------------------+--------------------------------------------+
-| Batch-URL of the API       | https://proxy-{site}.hyber.im/{client_id}/batch https://proxy-{site}.hyber.im/{client_id}/batch/sync |
-+---------------------+--------------------------------------------+
-| Broadcast-URL of the API   | https://proxy-{site}.hyber.im/{client_id}/broadcast https://proxy-{site}.hyber.im/{client_id}/broadcast/sync |
-+---------------------+--------------------------------------------+
-| Method              | POST                                       |
-+---------------------+--------------------------------------------+
-| HTTP Authentication | Basic                                      |
-+---------------------+--------------------------------------------+
-| Mandatory header    | Content-Type: application/json             |
-+---------------------+--------------------------------------------+
-| HTTP Login/Password | TBA by GMS in technical plan               |
-+---------------------+--------------------------------------------+
-
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| Parameters                | Value                                                                                                         |
++===========================+===============================================================================================================+
+| Provider Role             | Server                                                                                                        |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| Client Role               | Client                                                                                                        |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| Batch-URL of the API      | https://proxy-{site}.hyber.im/{client_id}/batch                                                               |
+|                           | https://proxy-{site}.hyber.im/{client_id}/batch/sync                                                          |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| Broadcast-URL of the API  | https://proxy-{site}.hyber.im/{client_id}/broadcast                                                           |
+|                           | https://proxy-{site}.hyber.im/{client_id}/broadcast/sync                                                      |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| Method                    | POST                                                                                                          |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| HTTP Authentication       | Basic                                                                                                         |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| Mandatory header          | Content-Type: application/json                                                                                |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
+| HTTP Login/Password       | TBA by GMS in technical plan                                                                                  |
++---------------------------+---------------------------------------------------------------------------------------------------------------+
 
 Batch request contains personalized Message text across all communication channels for each User.
 Broadcast request contains general text and variables that holds personalized values and can be used for all query parameters.

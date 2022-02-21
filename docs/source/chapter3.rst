@@ -4,7 +4,7 @@ MASS MESSAGES SENDING
 JSON V2 protocol grants mass sending of Messages in a single request. The maximum number of Recipients in one request is 50,000.
 Access details and URLs: 
 
-.. table:: Connection parameters
+Table 3.1. Connection parameters
 
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
 | Parameters                | Value                                                                                                         |
@@ -13,10 +13,12 @@ Access details and URLs:
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
 | Client Role               | Client                                                                                                        |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
-| Batch-URL of the API      | https://proxy-{site}.hyber.im/{client_id}/batch      \\                                                       |
+| Batch-URL of the API      | https://proxy-{site}.hyber.im/{client_id}/batch                                                               |
+|                           |                                                                                                               |
 |                           | https://proxy-{site}.hyber.im/{client_id}/batch/sync                                                          |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
-| Broadcast-URL of the API  | https://proxy-{site}.hyber.im/{client_id}/broadcast      \\                                                   |
+| Broadcast-URL of the API  | https://proxy-{site}.hyber.im/{client_id}/broadcast                                                           |
+|                           |                                                                                                               |
 |                           | https://proxy-{site}.hyber.im/{client_id}/broadcast/sync                                                      |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
 | Method                    | POST                                                                                                          |

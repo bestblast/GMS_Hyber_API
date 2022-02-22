@@ -39,27 +39,27 @@ Main
                              | Maximum length: 64 characters 
 10 division_code   No        | Access group code. Used to separate statistics on Messages for child
                                users of the web-interface. 
-			     | Maximum length: 100 characters.
+        | Maximum length: 100 characters.
                              | Statistics are separated only by pre-generated code, which is
                                configured on the "Access groups" tab of the client web-interface.
 11 ctr             No        | Counting clicks on the link. Choosing this option will
                                automatically convert your URL to a unique shortened/elongated link
                                for each separate phone number. By using this option, you are
                                solely responsible for the alteration of your link(s) and subsequent
-			       results. Boolean value (true / false). true value activates counting
-			       clicks on the link. The parameter must be specified separately for 
-			       each of the channels of sending the Message. URL conversion and 
-			       clicks counting occur in the following query parameters:
+          results. Boolean value (true / false). true value activates counting
+          clicks on the link. The parameter must be specified separately for 
+          each of the channels of sending the Message. URL conversion and 
+          clicks counting occur in the following query parameters:
                              | "viber": ["text", "action"],
                              | "sms": ["text"],
                              | "push": ["text", "action"],
                              | "whatsapp": ["text"]
                              | If the parameter is not specified or it is false, the link is not 
-			       converted and clicks are not counted
+          converted and clicks are not counted
                              | Converted URL length: 28 characters
                              | The converted URL is available within three months since the start
-			       of sending the Message and clicks on the link are counted for the 
-			       first fourteen days.
+          of sending the Message and clicks on the link are counted for the 
+          first fourteen days.
                              | Viber channel parameters 
 == =============== ========= =======================================================================
 
@@ -167,55 +167,65 @@ Push channel parameters
 .. table:: Description of Message delivery report parameters
   :class: longtable
 
-№ Name  Description 
-1 number 
-phone_number User`s phone number.
- It is given in the international format without the «+» sign
-2 time Unix time stamp for the last action of a communication channel
-3 message_id Message identifier
-4 extra_id External identifier of the Message (specified by you)
-5 status Simplified status of the Message.
- The list of statuses is provided in Section 9
+==== ====== ===================================
+№    Name   Description
+==== ====== ===================================
+1    number               | phone_number User`s phone number.
+                          | It is given in the international
+                          format without the «+» sign
+2    time                 Unix time stamp for the last action of a communication channel
+3    message_id           Message identifier
+4    extra_id             External identifier of the Message (specified by you)
+5    status               | Simplified status of the Message.
+                          | The list of statuses is provided in Section 9
+6    substatus            | Extended Message status.
+                          | The list of statuses is provided in Section 9
+7    hyber_status         | Detailed Message status. 
+                          | The list of statuses is provided in Section 9 
+8    sent_via             | The last channel of Message delivery.
+                          | If Message is blocked by the Platform – the value of the field is "hyber"
+9    total_sms_parts      The total number of parts of the SMS-Message
+10   delivered_sms_parts  | Number of delivered parts of SMS-Message.
+                          | If there is no Message sent to SMS channel, this parameter is missing
+11   matching_template_id | Matching Template ID, which specifies the Viber template number.  
+                          | If the Message does not match any template - the value in this field is 0
+12   status_text          Short description of the status of the Message
+13   error_text           Short description of the error
+14   error_code           | Error code.
+                          | The list of codes is provided in Section 9
+15   processed            | Boolean value (true/false).
+                          | It is true only if the Message is being processed  
+                          | It is false if processing of the Message has not been started
+16   accepted             | Boolean value (true/false).
+                          | It is true only if the Message is accepted by platform 
+                          | It is false if the Message is rejected by platform 
+17   last_partner         | The last channel of Message delivery. 
+                          | If the Message is accepted but has not got final status or it is blocked by the Platform – the value of the field is "hyber" 
+                          | For a detailed report (advanced), this parameter is specified for each communication channel
+18   delivered_via        | The last channel of Message delivery.
+                          | If the Message is accepted but has not got final status or it is blocked by the Platform – the value of the field is "hyber"
+19   started              | Boolean value (true/false). 
+                          | It is false if processing of the Message either has not started or started with delay
+20   processing           | Boolean value (true/false).
+                          | It is true only if the Message is being processed
+                          | It is false if processing of the Message either has not been started or already ended
+21   channel              Message sending channel
+22   ttl                  Message lifetime in seconds for each of channels
+23   clicks               Number of clicks on links.
+                          If the "ctr" parameter is not specified in the request or is false, the "clicks" parameter will be missing
+==== ====== ==================================
+ 
+ .. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
 
-6 substatus Extended Message status.
- The list of statuses is provided in Section 9
-
-7 hyber_status Detailed Message status. 
- The list of statuses is provided in Section 9 
-
-8 sent_via The last channel of Message delivery.
- If Message is blocked by the Platform – the value of the field is "hyber"
-9 total_sms_parts The total number of parts of the SMS-Message
-10 delivered_sms_parts Number of delivered parts of SMS-Message.
- If there is no Message sent to SMS channel, this parameter is missing
-11 matching_template_id Matching Template ID, which specifies the Viber template number.  
- If the Message does not match any template - the value in this field is 0
-12 status_text Short description of the status of the Message
-13 error_text Short description of the error
-14 error_code Error code.
- The list of codes is provided in Section 9  
-
-15 processed Boolean value (true/false).
- It is true only if the Message is being processed  
- It is false if processing of the Message has not been started
-16 accepted Boolean value (true/false).
- It is true only if the Message is accepted by platform 
- It is false if the Message is rejected by platform 
-17 last_partner The last channel of Message delivery. 
- If the Message is accepted but has not got final status or it is blocked by the Platform – the value of the field is "hyber" 
- For a detailed report (advanced), this parameter is specified for each communication channel
-18 delivered_via The last channel of Message delivery.
- If the Message is accepted but has not got final status or it is blocked by the Platform – the value of the field is "hyber"
-19 started Boolean value (true/false). 
- It is false if processing of the Message either has not started or started with delay
-20 processing Boolean value (true/false).
- It is true only if the Message is being processed
- It is false if processing of the Message either has not been started or already ended
-21 channel Message sending channel
-22 ttl Message lifetime in seconds for each of channels
-23 clicks Number of clicks on links.
- If the "ctr" parameter is not specified in the request or is false, the "clicks" parameter will be missing
-
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+ 
 .. list-table:: Description of User reply parameters
    :widths: 10 30 100
    :header-rows: 1

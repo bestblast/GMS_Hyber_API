@@ -18,34 +18,43 @@ Main
                              the «+» sign 
 2  channels        Yes       List of Message delivery channels. Any combination without duplicates, 
                              e.g. **Viber + SMS** or **Push + Viber + SMS**
-3  channel_options Yes       Have tobe specified for each communication channel
+3  channel_options Yes       Have to be specified for each communication channel
 4  messages        Yes       The list of phone numbers of Users and texts will be transmitted to all
                              communication channels for batch request
 5  recipients      Yes       List of parameters for personalized campaign for broadcast request
-6  extra_id        No        External identifier of the Message (specified by you). 
-                             Maximum length: 64 characters
-7  callback_url    No        Message reports will be sent to this URL. 
-                             Maximum length: 256 characters 
+6  extra_id        No        | External identifier of the Message (specified by you). 
+                             | Maximum length: 64 characters
+7  callback_url    No        | Message reports will be sent to this URL. 
+                             | Maximum length: 256 characters 
 8  start_time      No        Scheduled date of campaign start. Shall be specified in the following
                              format: "YYYY-MM-DD hh:mm:ss±hh:mm". If the difference with time
                              according to Greenwich Mean Time (in the format +03:00) is not
                              specified, then the difference according to Kyiv time is calculated
-9  tag             No        Campaign name. Maximum length:64 characters 
-10 division_code   No        Access group code. Used to separate statistics on Messages for child
-                             users of the web-interface. Maximum length: 100 characters.
-                             Statistics are separated only by pre-generated code, which is
-                             configured on the "Access groups" tab of the client web-interface.
+9  tag             No        | Campaign name.
+                             | Maximum length: 64 characters 
+10 division_code   No        | Access group code. Used to separate statistics on Messages for child
+                               users of the web-interface. 
+			     | Maximum length: 100 characters.
+                             | Statistics are separated only by pre-generated code, which is
+                               configured on the "Access groups" tab of the client web-interface.
 11 ctr             No        | Counting clicks on the link. Choosing this option will
                                automatically convert your URL to a unique shortened/elongated link
                                for each separate phone number. By using this option, you are
-							   solely responsible for the alteration of your link(s) and subsequent results. Boolean value (true / false). true value activates counting clicks on the link. The parameter must be specified separately for each of the channels of sending the Message. URL conversion and clicks counting occur in the following query parameters:
+                               solely responsible for the alteration of your link(s) and subsequent
+			       results. Boolean value (true / false). true value activates counting
+			       clicks on the link. The parameter must be specified separately for 
+			       each of the channels of sending the Message. URL conversion and 
+			       clicks counting occur in the following query parameters:
                              | "viber": ["text", "action"],
                              | "sms": ["text"],
                              | "push": ["text", "action"],
                              | "whatsapp": ["text"]
-                             | If the parameter is not specified or it is false, the link is not converted and clicks are not counted
+                             | If the parameter is not specified or it is false, the link is not 
+			       converted and clicks are not counted
                              | Converted URL length: 28 characters
-                             | The converted URL is available within three months since the start of sending the Message and clicks on the link are counted for the first fourteen days.
+                             | The converted URL is available within three months since the start
+			       of sending the Message and clicks on the link are counted for the 
+			       first fourteen days.
                              | Viber channel parameters 
 == =============== ========= =======================================================================
 

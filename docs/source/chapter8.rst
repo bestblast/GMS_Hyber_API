@@ -9,6 +9,11 @@ There are the following parameter types:
 
 Table 8.1. Description of the request parameters
 
+.. tabularcolumns:: |p{1cm}|p{4cm}|p{2cm}|p{10cm}|
+
+.. table:: Description of the request parameters
+  :class: longtable
+
 == =============== ========= =======================================================================
 №  Name            Mandatory Description 
 == =============== ========= =======================================================================

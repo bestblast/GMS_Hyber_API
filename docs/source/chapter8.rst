@@ -167,9 +167,9 @@ Push channel parameters
 .. table:: Description of Message delivery report parameters
   :class: longtable
 
-==== ====== ===================================
-№    Name   Description
-==== ====== ===================================
+==== ==================== ============================================================================
+№    Name                 Description
+==== ==================== ============================================================================
 1    number               | phone_number User`s phone number.
                           | It is given in the international
                           format without the «+» sign
@@ -211,9 +211,9 @@ Push channel parameters
                           | It is false if processing of the Message either has not been started or already ended
 21   channel              Message sending channel
 22   ttl                  Message lifetime in seconds for each of channels
-23   clicks               Number of clicks on links.
-                          If the "ctr" parameter is not specified in the request or is false, the "clicks" parameter will be missing
-==== ====== ==================================
+23   clicks               | Number of clicks on links.
+                          | If the "ctr" parameter is not specified in the request or is false, the "clicks" parameter will be missing
+==== ==================== ============================================================================
  
  .. list-table:: Frozen Delights!
    :widths: 15 10 30

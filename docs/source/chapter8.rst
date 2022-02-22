@@ -9,7 +9,7 @@ There are the following parameter types:
 
 Table 8.1. Description of the request parameters
 
-.. tabularcolumns:: |p{1cm}|p{4cm}|p{2cm}|p{10cm}|
+.. tabularcolumns:: |p{1cm}|p{2cm}|p{2cm}|p{10cm}|
 
 .. table:: Description of the request parameters
   :class: longtable
@@ -142,9 +142,9 @@ Push channel parameters
 37 action  No  URL inside the button. Maximum length: 256characters 
 
 
+.. table:: Description of the response parameters
+  :class: longtable
 
-
-Table 8.2. Description of the response parameters
 №  Name Description
 1 message_id Message identifier.
  Set in UUID format
@@ -164,7 +164,9 @@ Table 8.2. Description of the response parameters
  It is true only if the Message is accepted by platform 
  It is false if the Message is rejected by platform 
 
-Table 8.3. Description of Message delivery report parameters 
+.. table:: Description of Message delivery report parameters
+  :class: longtable
+
 № Name  Description 
 1 number 
 phone_number User`s phone number.
@@ -214,33 +216,62 @@ phone_number User`s phone number.
 23 clicks Number of clicks on links.
  If the "ctr" parameter is not specified in the request or is false, the "clicks" parameter will be missing
 
-Table 8.4. Description of User reply parameters 
-№ Name  Description 
-1 phone User`s phone number. 
- It is given in the international format without the «+» sign
-2 time User’s reply date and time.
- According to Kyiv local time for Viber User replies 
- UTC+0 for WhatsApp User replies
-3 channel The communication channel  
-4 message_id The Message identifier to which the User replies.
- Set in UUID format 
-5 extra_id External identifier of the Message to which the User replies
-6 text_to_subscriber Text of Message, to which the User replies. This value can be null if the User has previously sent the following Message type: Image Only or File Only
-7 text_from_subscriber User`s text reply
-8 file_name Name of file
-9 media Link of shared image.
- For example: "https://example.com/file.docx"
-10 umid Transport ID of the sent Message, to which the User replies.
- Set in UUID format 
-11 image_url Link of shared image.
- For example: "https://example.com/image.png"
-12 video_url Link of shared video.
- For example: "https://example.com/video.mp4"
-13 audio_url Link of shared audio.
- For example: "https://example.com/audio.mp3"
-14 doc_url Link of shared file.
- For example: "https://example.com/file.docx"
-15 location Link of shared location.
- For example:"50.450248718262,30.523889541626"
-
- 
+.. list-table:: Description of User reply parameters
+   :widths: 10 30 100
+   :header-rows: 1
+   :class: longtable
+   
+   * - №
+     - Name
+     - Description
+   * - 1
+     - phone
+     - User`s phone number.
+   * - 2 
+     - time 
+     - User’s reply date and time. According to Kyiv local time for Viber User replies 
+     UTC+0 for WhatsApp User replies
+   * - 3 
+     - channel 
+     - The communication channel
+   * - 4 
+     - message_id 
+     - The Message identifier to which the User replies.
+     Set in UUID format
+   * - 5 
+     - extra_id 
+     - External identifier of the Message to which the User replies
+   * - 6 
+     - text_to_subscriber
+     - Text of Message, to which the User replies. This value can be null if the User has previously sent the following Message type: Image Only or File Only
+   * - 7 
+     - text_from_subscriber
+     - User`s text reply
+   * - 8 
+     - file_name
+     - Name of file
+   * - 9 
+     - media
+     - Link of shared image. For example: "https://example.com/file.docx"
+   * - 10 
+     - umid
+     - Transport ID of the sent Message, to which the User replies. Set in UUID format
+   * - 11 
+     - image_url
+     - Link of shared image. For example: "https://example.com/image.png"
+   * - 12 
+     - video_url
+     - Link of shared video.
+     For example: "https://example.com/video.mp4"
+   * - 13 
+     - audio_url 
+     - Link of shared audio.
+     For example: "https://example.com/audio.mp3"
+   * - 14 
+     - doc_url
+     - Link of shared file.
+     For example: "https://example.com/file.docx"
+   * - 15 
+     - location
+     Link of shared location.
+     For example:"50.450248718262,30.523889541626"

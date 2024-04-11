@@ -74,6 +74,7 @@ Send Push+Viber+SMS Message request
            }
        }
    }
+
 Send Viber+SMS Message request 
 ------------------------------
 
@@ -108,6 +109,7 @@ Send Viber+SMS Message request
            }
        }
    }
+
 Send Viber Message request
 -------------------------- 
 
@@ -133,6 +135,7 @@ Example of template Message request (only text is specified):
            }
        }
    }
+
 Example of non-template Message request:
 
 .. code-block:: json
@@ -208,6 +211,89 @@ Example of Viber Message request with "File Only" type:
                "device": "phone",
                "file_name": "Name_for_document.docx",
                "action": "https://example.com/file.docx",
+               "ctr": false
+           }
+       }
+   }
+Example of Viber Message request with "Video Only" type:
+
+.. code-block:: json
+
+   {
+       "phone_number": 380961111111,
+       "extra_id": "AD-6640-7006",
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "file_size": 3,
+               "duration": 60,
+               "ctr": false
+           }
+       }
+   }
+
+Example of Viber Message request with "Video & Text" type:
+
+.. code-block:: json
+
+   {
+       "phone_number": 380961111111,
+       "extra_id": "AD-6640-7006",
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "file_size": 3,
+               "duration": 60,
+               "text": "Text for Viber",
+               "ctr": false
+           }
+       }
+   }
+
+Example of Viber Message request with "Video, Text & Action Button" type:
+
+.. code-block:: json
+
+   {
+       "phone_number": 380961111111,
+       "extra_id": "AD-6640-7006",
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "caption": "Click the button",
+               "file_size": 3,
+               "duration": 60,
+               "text": "Text for Viber",
                "ctr": false
            }
        }
@@ -308,6 +394,7 @@ If the request is correct, you receive the following response to your request:
 If the request contains an error or inconsistency with the connection settings, you receive the following response:
 
 .. code-block:: json
+
    {"error_code":36024,"error_text":"Phone number incorrect"}
 
 A description of the response parameters is provided in Section 9. 

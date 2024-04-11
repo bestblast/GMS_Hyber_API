@@ -2,9 +2,10 @@ MASS MESSAGES SENDING
 =====================
 
 JSON V2 protocol grants mass sending of Messages in a single request. The maximum number of Recipients in one request is 50,000.
+
 Access details and URLs: 
 
-Table 3.1. Connection parameters
+Table 3.1. Connection parameters:
 
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
 | Parameters                | Value                                                                                                         |
@@ -21,19 +22,23 @@ Table 3.1. Connection parameters
 |                           |                                                                                                               |
 |                           | https://proxy-{site}.hyber.im/{client_id}/broadcast/sync                                                      |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
-| Method                    | POST                                                                                                          |
+| Method                    | ``POST``                                                                                                       |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
-| HTTP Authentication       | Basic                                                                                                         |
+| HTTP Authentication       | ``Basic``                                                                                                         |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
-| Mandatory header          | Content-Type: application/json                                                                                |
+| Mandatory header          | ``Content-Type: application/json``                                                                                |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
 | HTTP Login/Password       | TBA by GMS in technical plan                                                                                  |
 +---------------------------+---------------------------------------------------------------------------------------------------------------+
 
-Batch request contains personalized Message text across all communication channels for each User.
-Broadcast request contains general text and variables that holds personalized values and can be used for all query parameters.
+**Batch** request contains personalized Message text across all communication channels for each User.
+
+**Broadcast** request contains general text and variables that holds personalized values and can be used for all query parameters.
+
 Examples of mass Messages requests are described in Sections 3.1-3.8.
-The HTTP Status 200 OK indicates that your request has been processed successfully by server.
+
+The HTTP Status ``200 OK`` indicates that your request has been processed successfully by server.
+
 The platform returns a response on your request (Section 3.9).
 
 
@@ -180,6 +185,78 @@ Example of Viber Message request with "alpha_name" parameter:
                "img": "https://example.com/image.png",
                "caption": "Click the button",
                "action": "https://example.com",
+               "ctr": false
+           }
+       }
+   }
+Example of Viber Message request with "Video & Text" type:
+
+.. code-block:: json
+
+   {
+       "messages": [{
+               "phone_number": 380961111111,
+               "extra_id": "AD-6640-7006",
+               "text": "Text for all channels, recipient #380961111111"
+           },
+           {
+               "phone_number": 380962222222,
+               "extra_id": "AD-6640-7007",
+               "text": "Text for all channels, recipient #380962222222"
+           }
+       ],
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "file_size": 3,
+               "duration": 60,
+               "ctr": false
+           }
+       }
+   }
+
+Example of Viber Message request with "Video, Text & Action Button" type:
+
+.. code-block:: json
+
+   {
+       "messages": [{
+               "phone_number": 380961111111,
+               "extra_id": "AD-6640-7006",
+               "text": "Text for all channels, recipient #380961111111"
+           },
+           {
+               "phone_number": 380962222222,
+               "extra_id": "AD-6640-7007",
+               "text": "Text for all channels, recipient #380962222222"
+           }
+       ],
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "caption": "Click the button",
+               "file_size": 3,
+               "duration": 60,
                "ctr": false
            }
        }
@@ -488,6 +565,122 @@ Example of Viber Message request with "File Only" type:
            }
        }
    }
+Example of Viber Message request with "Video Only" type:
+
+.. code-block:: json
+
+   {
+       "recipients": [{
+               "phone_number": 380961111111,
+               "extra_id": "AD-6640-7006",
+               "name": "Michael",
+               "greeting": "Mr. "
+           },
+           {
+               "phone_number": 380962222222,
+               "extra_id": "AD-6640-7007",
+               "name": "Zoya",
+               "greeting": "Ms. "
+           }
+       ],
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "file_size": 3,
+               "duration": 60,
+               "ctr": false
+           }
+       }
+   }
+
+Example of Viber Message request with "Video & Text" type:
+
+.. code-block:: json
+
+   {
+       "recipients": [{
+               "phone_number": 380961111111,
+               "extra_id": "AD-6640-7006",
+               "name": "Michael",
+               "greeting": "Mr. "
+           },
+           {
+               "phone_number": 380962222222,
+               "extra_id": "AD-6640-7007",
+               "name": "Zoya",
+               "greeting": "Ms. "
+           }
+       ],
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "file_size": 3,
+               "duration": 60,
+               "text": "Text for Viber",
+               "ctr": false
+           }
+       }
+   }
+
+Example of Viber Message request with "Video, Text & Action Button" type:
+
+.. code-block:: json
+
+   {
+       "recipients": [{
+               "phone_number": 380961111111,
+               "extra_id": "AD-6640-7006",
+               "name": "Michael",
+               "greeting": "Mr. "
+           },
+           {
+               "phone_number": 380962222222,
+               "extra_id": "AD-6640-7007",
+               "name": "Zoya",
+               "greeting": "Ms. "
+           }
+       ],
+       "callback_url": "https://send-dr-here.com",
+       "start_time": "2020-12-12 10:10:10+03:00",
+       "tag": "Campaign name",
+       "division_code": "Division code",
+       "channels": [
+           "viber"
+       ],
+       "channel_options": {
+           "viber": {
+               "ttl": 60,
+               "device": "phone",
+               "thumbnail": "https://example.com/image.png",
+               "action": "https://example.com/file_example_MP4_640_3MG.mp4",
+               "caption": "Click the button",
+               "file_size": 3,
+               "duration": 60,
+               "text": "Text for Viber",
+               "ctr": false
+           }
+       }
+   }
 
 Send broadcast SMS Messages request
 -----------------------------------
@@ -608,13 +801,13 @@ Example of non-template (Session) Message request:
 Response to a Mass Messages request 
 -----------------------------------
 
-If the request was sent to the URL https://proxy-{site}.hyber.im/{client_id}/batch or https://proxy-{site}.hyber.im/{client_id}/broadcast you will receive a campaign ID in response as: 
+If the request was sent to the URL ``https://proxy-{site}.hyber.im/{client_id}/batch`` or ``https://proxy-{site}.hyber.im/{client_id}/broadcast`` you will receive a campaign ID in response as: 
 
 .. code-block:: json
 
    {"job_id": "66591729-cb47-5ef9-964b-949dc6aff84f"}
 
-If the request is sent to the URL https://proxy-{site}.hyber.im/{client_id}/batch/sync or https://proxy-{site}.hyber.im/{client_id}/broadcast/sync you receive details on each Message with their "message_id":
+If the request is sent to the URL ``https://proxy-{site}.hyber.im/{client_id}/batch/sync`` or ``https://proxy-{site}.hyber.im/{client_id}/broadcast/sync`` you receive details on each Message with their "message_id":
 
 .. code-block:: json
 
@@ -657,9 +850,9 @@ Table 3.2. Connection parameters
 +---------------------+----------------------------------------------------------+
 | Get Job status URL  | https://proxy-{site}.hyber.im/{client_id}/status/{job_id}|
 +---------------------+----------------------------------------------------------+
-| Method              | GET                                                      |
+| Method              | ``GET``                                                      |
 +---------------------+----------------------------------------------------------+
-| HTTP Authentication | Basic                                                    |
+| HTTP Authentication | ``Basic``                                                    |
 +---------------------+----------------------------------------------------------+
 | HTTP Login/Password | TBA by GMS in technical plan                             |
 +---------------------+----------------------------------------------------------+
@@ -698,7 +891,8 @@ Example of campaign status:
            }]
    }
 
-The HTTP Status 200 OK indicates that your request has been processed successfully by server.
+The HTTP Status ``200 OK`` indicates that your request has been processed successfully by server. 
+
 A description of the report parameters is provided in Section 8.
 
 

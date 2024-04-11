@@ -7,9 +7,9 @@ Viber Business Messaging
 Viber Business Messages allows for a variety of Messages to be used to communicate with Users. 
 The following are examples of the types of Messages that can be sent:
 
-.. figure:: /img/ch1_pic1.JPG
+.. figure:: /img/ch1_pic1.PNG
    :figwidth: 500px
-   :target: /img/ch1_pic1.JPG
+   :target: /img/ch1_pic1.PNG
    :align: center
 
    Kinds of Viber Messages

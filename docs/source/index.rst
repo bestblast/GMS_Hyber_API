@@ -28,7 +28,7 @@ Contents
    part4
    chapter5
    chapter6
-   chapter7.rst
+   chapter7
    chapter8
    usage
    api

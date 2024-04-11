@@ -2,11 +2,11 @@
 
 # -- Project information
 
-project = 'JSON V2Protocol'
-copyright = '2022, GMS'
+project = 'JSON V2 Protocol'
+copyright = '2024, GMS'
 author = 'GMS'
 
-release = '2.2'
+release = '2.4'
 version = '2.2.0'
 
 # -- General configuration

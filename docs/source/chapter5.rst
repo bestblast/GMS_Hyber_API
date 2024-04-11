@@ -15,8 +15,8 @@ Get Detailed DR URLs  | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{messag
                       | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/advanced
 Get Simple DR URLs    | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple
                       | https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple
-Method                GET
-HTTP Authentication   Basic
+Method                ``GET``
+HTTP Authentication   ``Basic``
 HTTP Login/Password   TBA by GMS in technical plan
 ===================== ===============================================================================
 
@@ -25,32 +25,30 @@ GET simple delivery report
 
 Simple Message delivery report may be requested by the Message identifier (received via API in the course of Messages creation: "message_id") or by the additional identifier (set by you in JSON request: "extra_id" parameter). 
 
-To GET the report using Message identifier, use the following URL:
+To GET the report using Message identifier, use the following :term:`URL`:
 
-\(w)
-   https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple
+``https://dr-v2-{site}.hyber.im/{client_id}/api/dr/{message_id}/simple``
 
 To GET the report using the additional identifier, use the following URL:
 
-\(w)
-   https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple
+``https://dr-v2-{site}.hyber.im/{client_id}/api/dr/external/{extra_id}/simple``
 
 An example of simplified delivery report: 
 
 .. code-block:: json
 
    {
-      "phone_number":"380961111111",
-      "last_partner":"sms",
-      "message_id":"9f60ac8f-e721-5027-b838-e6fcb95fcd7a",
-      "extra_id":"AD-6640-7006",
-      "time":1477417294667,
-      "status":2,
-      "substatus":23,
-      "hyber_status":23011,
-      "total_sms_parts":1,
-      "delivered_sms_parts":1,
-      "clicks":2
+      "phone_number": "380961111111",
+      "last_partner": "sms",
+      "message_id": "9f60ac8f-e721-5027-b838-e6fcb95fcd7a",
+      "extra_id": "AD-6640-7006",
+      "time": 1477417294667,
+      "status": 2,
+      "substatus": 23,
+      "hyber_status": 23011,
+      "total_sms_parts": 1,
+      "delivered_sms_parts": 1,
+      "clicks": 2
    }
 
 The HTTP Status 200 OK indicates that your request has been processed successfully by server.

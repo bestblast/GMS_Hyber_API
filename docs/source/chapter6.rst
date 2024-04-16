@@ -57,7 +57,7 @@ Example of Viber User reply with media file:
       "extra_id": "1883",
       "text_to_subscriber": "text 2 viber",
       "file_name": "Name_for_document.docx",
-      "media": https://example.com/file.docx"
+      "media": "https://example.com/file.docx"
    }
 
 A description of the report parameters is provided in Section 8.

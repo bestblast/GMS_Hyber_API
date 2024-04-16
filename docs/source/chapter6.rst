@@ -75,7 +75,7 @@ Example of WhatsApp User reply:
       "channel": "whatsapp",
       "phone": "380110000000",
       "time": "2019-11-26T08:13:39Z",
-      "umid": 91dbb1a6-2410-ea11-8153-022a22cc1c71",
+      "umid": "91dbb1a6-2410-ea11-8153-022a22cc1c71",
       "text_from_subscriber": "Test reply"
    }
 

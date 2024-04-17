@@ -3,29 +3,25 @@ DESCRIPTION OF THE REQUEST PARAMETERS
 
 There are the following parameter types:
 
-- String. Example: "text": "Text for Viber"
-- Number. Example: "phone_number": 380962222222
-- Boolean. Example: "ctr": false, "ctr": true
+- String. Example: ``"text": "Text for Viber"```
+- Number. Example: ``"phone_number": 380962222222``
+- Boolean. Example: ``"ctr": false, "ctr": true``
 
-Table 8.1. Description of the request parameters
+Description of the request parameters
 
-.. tabularcolumns:: |p{1cm}|p{2cm}|p{2cm}|p{10cm}|
-
-.. table:: Description of the request parameters
-  :class: longtable
+Main
 
 == =============== ========= =======================================================================
 №  Name            Mandatory Description 
 == =============== ========= =======================================================================
-Main
-1  phone_number    Yes       Phone number of User. It is given in the international format without 
+1  phone_number    **Yes**   Phone number of User. It is given in the international format without 
                              the «+» sign 
-2  channels        Yes       List of Message delivery channels. Any combination without duplicates, 
+2  channels        **Yes**   List of Message delivery channels. Any combination without duplicates, 
                              e.g. **Viber + SMS** or **Push + Viber + SMS**
-3  channel_options Yes       Have to be specified for each communication channel
-4  messages        Yes       The list of phone numbers of Users and texts will be transmitted to all
+3  channel_options **Yes**   Have to be specified for each communication channel
+4  messages        **Yes**   The list of phone numbers of Users and texts will be transmitted to all
                              communication channels for batch request
-5  recipients      Yes       List of parameters for personalized campaign for broadcast request
+5  recipients      **Yes**   List of parameters for personalized campaign for broadcast request
 6  extra_id        No        External identifier of the Message (specified by you). 
                              Maximum length: 64 characters
 7  callback_url    No        Message reports will be sent to this URL. 
@@ -59,7 +55,13 @@ Main
                              The converted URL is available within three months since the start
                              of sending the Message and clicks on the link are counted for the 
                              first fourteen days.
-                             Viber channel parameters 
+== =============== ========= =======================================================================
+
+Viber channel parameters 
+
+== =============== ========= =======================================================================
+№  Name            Mandatory Description 
+== =============== ========= =======================================================================
 10 text            No        Viber Message text. Text requirements - up to 1000 characters (Cyrillic
                              , Latin), including emoji codes and specific markdowns.You can format y
                              our message by adding specific markdowns(only users with Viber version 
@@ -69,11 +71,11 @@ Main
                              ugh - tilde markdown. String to be sent:"~Text for Viber~", Result: Tex
                              t for Viber Monospace - three backticks markdown. String to be sent: 
                              "```Text for Viber```", Result: Text for Viber
-11 ttl             Yes       |Message lifetime in seconds: 
+11 ttl             **Yes**   |Message lifetime in seconds: 
                              |Viber: 40..86400
                              |We recommend not setting a low TTL. This will help prevent  cases where users will receive both Viber and SMS messages.
                              |Recommended minimum for TTL is 60 seconds.
-12 device          No        |Selection of devices for delivery Messages (only for Viber ID 1way).
+12 device          **Yes**   |Selection of devices for delivery Messages (only for Viber ID 1way).
                              |"all" - delivery to all devices 
                              |"phone" - delivery only to smartphones
                              |The template message can only be delivered to smartphone, so the device parameter is ignored.
@@ -96,14 +98,26 @@ Main
                              PDF: .pdf, .xps, .pdax, .eps. Example: "File_name.pdf"
                              Spreadsheets: .xls, .xlsx, .ods, .fods, .csv, .xlsm, .xltx. Example: "File_name.xlsx"
                              Maximum file size: 200Mb.
-                             SMS channel parameters  
-18 text            Yes       SMS Message text. Text requirements - Cyrillic characters (up to 335 characters), Latin characters (up to 765 characters) 
-19 ttl             Yes       Message lifetime in seconds:
+== =============== ========= =======================================================================
+
+SMS channel parameters  
+
+== =============== ========= =======================================================================
+№  Name            Mandatory Description 
+== =============== ========= =======================================================================
+18 text            **Yes**   SMS Message text. Text requirements - Cyrillic characters (up to 335 characters), Latin characters (up to 765 characters) 
+19 ttl             **Yes**   Message lifetime in seconds:
                              SMS: 300..259200 
-20 alpha_name      Yes       Alphanumeric name. 
+20 alpha_name      **Yes**   Alphanumeric name. 
                              |Maximum length is 11 characters, may begin with a number
                              |Alphanumeric name may consist of GSM7-bit default alphabet table characters only
-                             |WhatsApp channel parameters 
+== =============== ========= =======================================================================
+
+WhatsApp channel parameters 
+
+== =============== ========= =======================================================================
+№  Name            Mandatory Description 
+== =============== ========= =======================================================================
 21 text            No        WhatsApp Message text. 
                              |Text requirements - up to 1000 characters (Cyrillic, Latin), including emoji codes and specific markdowns.
                              |You can format your message by adding specific markdowns.
@@ -115,14 +129,13 @@ Main
                              |"~Session text for WhatsApp~", Result: Session text for WhatsApp
                              |Monospace - three backticks markdown. String to be sent:
                              |"```Session text for WhatsApp```", Result: Session text for WhatsApp
-22 ttl             Yes       Message lifetime in seconds: 
+22 ttl             **Yes**   Message lifetime in seconds: 
                              |WhatsApp: 604800 
 23 img             No        URL of an image on the Internet. 
-                             Maximum length: 256characters 
+                             Maximum length: 256 characters 
 24 img_name        No        Text under the image. 
                              Maximum length: 1000 characters
 25 doc             No        URL of a file on the Internet. 
-
                              Maximum length: 256characters 
 26 doc_name        No        Text under the file. 
                              Maximum length: 1000 characters 
@@ -136,12 +149,18 @@ Main
                              Numeric value from -90 to 90 
 31 longitude       No        Longitude coordinates. 
                              Numeric value from -180 to 180 
-                             Push channel parameters  
-32 text            Yes       Push Message text. 
+== =============== ========= =======================================================================
+
+Push channel parameters
+
+== =============== ========= =======================================================================
+№  Name            Mandatory Description 
+== =============== ========= =======================================================================
+32 text            **Yes**   Push Message text
                              Text requirements – up to 1000 characters (Cyrillic and Latin) 
-33 ttl             Yes       Message lifetime in seconds: Push: 30..86400 
-34 title           Yes       Title of Message. 
-                             Maximum length:20characters 
+33 ttl             **Yes**   Message lifetime in seconds: Push: 30..86400 
+34 title           **Yes**   Title of Message. 
+                             Maximum length: 20 characters 
 35 img             No        URL of an image on the Internet. Maximum length:256characters
 36 caption         No        Name of caption. Maximum length: 30 characters
 37 action          No        URL inside the button. Maximum length: 256 characters
@@ -178,7 +197,7 @@ Main
      - Boolean value (true/false). It is true only if the Message is being processed. It is false if processing of the Message has not been started 
    * - 8 
      - accepted 
-	   - Boolean value (true/false).  It is true only if the Message is accepted by platform. It is false if the Message is rejected by platform 
+     - Boolean value (true/false).  It is true only if the Message is accepted by platform. It is false if the Message is rejected by platform 
 
 
 .. table:: Description of Message delivery report parameters
@@ -275,13 +294,13 @@ Main
      - Link of shared image. For example: "https://example.com/image.png"
    * - 12 
      - video_url
-     - Link of shared video.      For example: "https://example.com/video.mp4"
+     - Link of shared video. For example: "https://example.com/video.mp4"
    * - 13 
      - audio_url 
-     - Link of shared audio.     For example: "https://example.com/audio.mp3"
+     - Link of shared audio. For example: "https://example.com/audio.mp3"
    * - 14 
      - doc_url
-     - Link of shared file.     For example: "https://example.com/file.docx"
+     - Link of shared file. For example: "https://example.com/file.docx"
    * - 15 
      - location     
-     - Link of shared location.     For example: "50.450248718262,30.523889541626"
+     - Link of shared location. For example: "50.450248718262,30.523889541626"
